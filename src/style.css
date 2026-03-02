@@ -1,0 +1,119 @@
+:root {
+  --bg-color: #1a1a2e;
+  --text-color: #eaeaea;
+  --accent-color: #4ecca3;
+  --secondary-color: #393e46;
+  --danger-color: #e94560;
+  --button-bg: #16213e;
+  --button-hover: #0f3460;
+  --canvas-border: #4ecca3;
+  --canvas-shadow: rgba(78, 204, 163, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  background-color: var(--secondary-color);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.game-title {
+  font-size: 2rem;
+  color: var(--accent-color);
+  text-shadow: 0 0 10px var(--canvas-shadow);
+  margin-bottom: 10px;
+}
+
+.score-board {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.score-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.score-label {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.score-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+#gameCanvas {
+  border: 3px solid var(--canvas-border);
+  border-radius: 8px;
+  box-shadow: 0 0 20px var(--canvas-shadow);
+  background-color: #0d1117;
+}
+
+.game-status {
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  text-align: center;
+  min-height: 27px;
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+}
+
+.game-button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  background-color: var(--button-bg);
+  color: var(--accent-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.game-button:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--canvas-shadow);
+}
+
+.game-button:active {
+  transform: translateY(0);
+}
+
+.game-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
